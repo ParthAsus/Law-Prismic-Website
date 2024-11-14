@@ -1,0 +1,72 @@
+{
+  "id": "shorten_about",
+  "type": "SharedSlice",
+  "name": "ShortenAbout",
+  "description": "ShortenAbout",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "about_heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "About Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "about_content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "About Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        },
+        "contact_us_heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Contact Us Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "contact_us_content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Contact Us Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,em,strong"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

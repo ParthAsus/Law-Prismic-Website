@@ -16,6 +16,7 @@ export default async function SliceSimulatorPage({
   return (
     <SliceSimulator>
       <SliceZone slices={slices} components={components} />
+      <></>
     </SliceSimulator>
   );
 }

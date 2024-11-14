@@ -1,0 +1,66 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"about_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Basket"
+						}
+					}
+				]
+			},
+			"about_content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non mollit non velit. Proident culpa duis cupidatat culpa irure commodo. Aute incididunt ea labore sint do incididunt do nulla fugiat aute."
+						}
+					}
+				]
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "cup"
+				}
+			},
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "ability",
+				"type": "Text"
+			},
+			"contact_us_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Planet"
+						}
+					}
+				]
+			},
+			"contact_us_content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint anim magna sit minim non do do minim. Reprehenderit elit proident consequat. Eiusmod cupidatat officia culpa sit."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
