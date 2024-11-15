@@ -3,88 +3,61 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"hero_repeatable_zone": {
-				"__TYPE__": "GroupContentType",
+			"title": {
+				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"background_image",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
-										"width": 3456,
-										"height": 3456
-									},
-									"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
-									"width": 3456,
-									"height": 3456,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"credits": null,
-									"alt": "ai",
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"heading",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "heading1",
-											"content": {
-												"text": "Shelter"
-											}
-										}
-									]
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Excepteur dolore eiusmod nisi consectetur. Reprehenderit aliquip veniam laboris non tempor laboris do. Consequat aliquip nostrud adipisicing pariatur."
-											}
-										}
-									]
-								}
-							],
-							[
-								"button_link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://twitter.com",
-										"text": "melted"
-									}
-								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "glass",
-									"type": "Text"
-								}
-							]
-						]
+						"type": "heading1",
+						"content": {
+							"text": "Detail"
+						}
 					}
 				]
+			},
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Est duis occaecat mollit irure commodo non et qui cupidatat minim nulla et laboris sit. Anim ad aute deserunt magna elit exercitation nisi labore aute. Anim veniam ipsum sint Lorem amet commodo consequat."
+						}
+					}
+				]
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "bite"
+				}
+			},
+			"button": {
+				"__TYPE__": "FieldContent",
+				"value": "heard",
+				"type": "Text"
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+					"width": 3168,
+					"height": 4752
+				},
+				"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+				"width": 3168,
+				"height": 4752,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
 			}
 		},
 		"items": []

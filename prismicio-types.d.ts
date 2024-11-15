@@ -446,75 +446,58 @@ export type FeaturesSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *Hero → Default → Primary → Hero Repeatable Zone*
- */
-export interface HeroSliceDefaultPrimaryHeroRepeatableZoneItem {
-  /**
-   * Background Image field in *Hero → Default → Primary → Hero Repeatable Zone*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_repeatable_zone[].background_image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  background_image: prismic.ImageField<never>;
-
-  /**
-   * Heading field in *Hero → Default → Primary → Hero Repeatable Zone*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_repeatable_zone[].heading
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  heading: prismic.TitleField;
-
-  /**
-   * Description field in *Hero → Default → Primary → Hero Repeatable Zone*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_repeatable_zone[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Button Link field in *Hero → Default → Primary → Hero Repeatable Zone*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_repeatable_zone[].button_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_link: prismic.LinkField;
-
-  /**
-   * Button field in *Hero → Default → Primary → Hero Repeatable Zone*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_repeatable_zone[].button
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button: prismic.KeyTextField;
-}
-
-/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * Hero Repeatable Zone field in *Hero → Default → Primary*
+   * Title field in *Hero → Default → Primary*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Title
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_repeatable_zone[]
-   * - **Documentation**: https://prismic.io/docs/field#group
+   * - **API ID Path**: hero.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  hero_repeatable_zone: prismic.GroupField<
-    Simplify<HeroSliceDefaultPrimaryHeroRepeatableZoneItem>
-  >;
+  title: prismic.TitleField;
+
+  /**
+   * Content field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Link field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Button field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.button
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button: prismic.KeyTextField;
+
+  /**
+   * Image field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 }
 
 /**
@@ -681,7 +664,6 @@ declare module "@prismicio/client" {
       FeaturesSliceVariation,
       FeaturesSliceDefault,
       HeroSlice,
-      HeroSliceDefaultPrimaryHeroRepeatableZoneItem,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
