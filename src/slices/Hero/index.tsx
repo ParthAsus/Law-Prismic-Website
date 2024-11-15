@@ -1,4 +1,4 @@
-import BackgroundImageSection from "@/app/components/backgroundImage";
+
 import Bounded from "@/app/components/bounded";
 import Heading from "@/app/components/heading";
 import { Content } from "@prismicio/client";
