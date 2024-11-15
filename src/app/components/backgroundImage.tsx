@@ -5,17 +5,19 @@ import React from "react";
 
 type BackgroundImageSectionProps = {
   classname?: string;
-  children: React.ReactNode;
+  // children: React.ReactNode;
   backgroundImage?: ImageField;
 };
 
 const BackgroundImageSection = ({
-  children,
+  // children,
   classname,
   backgroundImage,
 }: BackgroundImageSectionProps) => {
   return (
-    
+    <PrismicNextImage field={backgroundImage} className="md:max-w-xl ">
+
+    </PrismicNextImage>
   );
 };
 

@@ -368,14 +368,29 @@ export type CampaignSlice = prismic.SharedSlice<
  */
 export interface FeaturesSliceDefaultPrimaryFeaturerepeatablezoneItem {
   /**
-   * Logo field in *Features → Default → Primary → FeatureRepeatableZone*
+   * Icons field in *Features → Default → Primary → FeatureRepeatableZone*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
-   * - **API ID Path**: features.default.primary.featurerepeatablezone[].logo
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **API ID Path**: features.default.primary.featurerepeatablezone[].icons
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  logo: prismic.ImageField<never>;
+  icons: prismic.SelectField<
+    | "Collaboration"
+    | "Commitment"
+    | "Cooperation"
+    | "Manufacturing"
+    | "Business Services"
+    | "Health Care"
+    | "Aerospace and Defense"
+    | "Industrial Services"
+    | "Growth"
+    | "Technologies"
+    | "Integration"
+    | "Graph"
+    | "Methodologies"
+    | "Growth"
+  >;
 
   /**
    * Heading field in *Features → Default → Primary → FeatureRepeatableZone*

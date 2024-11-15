@@ -16,17 +16,16 @@ const components: JSXMapSerializer = {
     <Heading
       as="h2"
       size="lg"
-      className="md:mb-8 mb-4 mt-12 first:mt-0 last:mb-0"
+      className="md:mb-8 mb-4 mt-12 first:mt-0 last:mb-0 w-full font-heading md:font-semibold 2xl:text-start text-center"
     >
       {children}
     </Heading>
   ),
   paragraph: ({ children }) => (
-    <p className="text-2xl font-normal leading-10 font-body text-slate-600 mb-4 md:mb-8 max-w-md">
+    <p className="text-2xl font-normal leading-10 font-body text-slate-600 mb-4 md:mb-8 w-full text-center xl:text-start">
       {children}
     </p>
   ),
-
 };
 /**
  * Props for `Hero`.
@@ -41,9 +40,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="w-full"
     >
-      <div className="flex justify-between text-center w-full max-h-10 border border-red-400">
-        <div className="flex gap-4 flex-col justify-between">
+      <div className="grid grid-cols-1 xl:grid-cols-2 md:items-center xl:items-center mx-auto h-full w-full">
+        <div className="w-full h-full flex flex-col pr-6 sm:items-center 2xl:items-start items-center justify-center">
           <PrismicRichText
             field={slice.primary.title}
             components={components}
@@ -53,10 +53,13 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             components={components}
           />
           <PrismicNextLink field={slice.primary.link}>
-            {slice.primary.button}
+            <div className="bg-cyan-600 py-4 px-8 rounded-full text-white font-body font-bold text-bas hover:bg-cyan-700 transition ease-in-out mb-12 2xl:mb-0 max-w-60 text-center">{slice.primary.button}</div>
           </PrismicNextLink>
         </div>
-        <BackgroundImageSection backgroundImage={slice.primary.image}/>
+        <PrismicNextImage
+          field={slice.primary.image}
+          className=" drop-shadow-2xl rounded-xl"
+        />
       </div>
     </Bounded>
   );

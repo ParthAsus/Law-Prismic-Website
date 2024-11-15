@@ -18,12 +18,27 @@
             "label": "FeatureRepeatableZone",
             "repeat": true,
             "fields": {
-              "logo": {
-                "type": "Image",
+              "icons": {
+                "type": "Select",
                 "config": {
-                  "label": "Logo",
-                  "constraint": {},
-                  "thumbnails": []
+                  "label": "Icons",
+                  "placeholder": "",
+                  "options": [
+                    "Collaboration",
+                    "Commitment",
+                    "Cooperation",
+                    "Manufacturing",
+                    "Business Services",
+                    "Health Care",
+                    "Aerospace and Defense",
+                    "Industrial Services",
+                    "Growth",
+                    "Technologies",
+                    "Integration",
+                    "Graph",
+                    "Methodologies",
+                    "Growth"
+                  ]
                 }
               },
               "heading": {
