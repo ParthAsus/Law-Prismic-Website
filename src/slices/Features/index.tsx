@@ -1,3 +1,4 @@
+import Bounded from "@/app/components/bounded";
 import Heading from "@/app/components/heading";
 import { categories } from "@/app/components/icons";
 import { Content } from "@prismicio/client";
@@ -47,7 +48,7 @@ export const icons: Record<string, IconComponent[]> = categories.reduce(
 );
 const Features = ({ slice }: FeaturesProps): JSX.Element => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -64,7 +65,7 @@ const Features = ({ slice }: FeaturesProps): JSX.Element => {
         ))}
       </div> */}
 
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 bg-white p-3 sm:p-8">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 bg-white">
         {slice.primary.featurerepeatablezone.map((item, index) => (
           <div
             key={index}
@@ -86,7 +87,7 @@ const Features = ({ slice }: FeaturesProps): JSX.Element => {
           </div>
         ))}
       </div>
-    </section>
+    </Bounded>
   );
 };
 

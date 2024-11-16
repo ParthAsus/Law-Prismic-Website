@@ -25,19 +25,6 @@
 					}
 				]
 			},
-			"link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com",
-					"text": "cup"
-				}
-			},
-			"label": {
-				"__TYPE__": "FieldContent",
-				"value": "ability",
-				"type": "Text"
-			},
 			"contact_us_heading": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
@@ -59,6 +46,40 @@
 						}
 					}
 				]
+			},
+			"links_name": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "wash"
+									}
+								}
+							],
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "machinery",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"contact_us_button": {
+				"__TYPE__": "FieldContent",
+				"value": "naturally",
+				"type": "Text"
 			}
 		},
 		"items": []

@@ -543,6 +543,31 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Item in *ShortenAbout → Default → Primary → Links Name*
+ */
+export interface ShortenAboutSliceDefaultPrimaryLinksNameItem {
+  /**
+   * Link field in *ShortenAbout → Default → Primary → Links Name*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: shorten_about.default.primary.links_name[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *ShortenAbout → Default → Primary → Links Name*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: shorten_about.default.primary.links_name[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *ShortenAbout → Default → Primary*
  */
 export interface ShortenAboutSliceDefaultPrimary {
@@ -567,24 +592,16 @@ export interface ShortenAboutSliceDefaultPrimary {
   about_content: prismic.RichTextField;
 
   /**
-   * Link field in *ShortenAbout → Default → Primary*
+   * Links Name field in *ShortenAbout → Default → Primary*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: shorten_about.default.primary.link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: shorten_about.default.primary.links_name[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  link: prismic.LinkField;
-
-  /**
-   * Label field in *ShortenAbout → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: shorten_about.default.primary.label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  label: prismic.KeyTextField;
+  links_name: prismic.GroupField<
+    Simplify<ShortenAboutSliceDefaultPrimaryLinksNameItem>
+  >;
 
   /**
    * Contact Us Heading field in *ShortenAbout → Default → Primary*
@@ -605,6 +622,16 @@ export interface ShortenAboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   contact_us_content: prismic.RichTextField;
+
+  /**
+   * Contact Us Button field in *ShortenAbout → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: shorten_about.default.primary.contact_us_button
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  contact_us_button: prismic.KeyTextField;
 }
 
 /**
@@ -683,6 +710,7 @@ declare module "@prismicio/client" {
       HeroSliceVariation,
       HeroSliceDefault,
       ShortenAboutSlice,
+      ShortenAboutSliceDefaultPrimaryLinksNameItem,
       ShortenAboutSliceDefaultPrimary,
       ShortenAboutSliceVariation,
       ShortenAboutSliceDefault,

@@ -29,9 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={clsx(nunito.variable, nunito_sans.variable)}
+        className={clsx(nunito.variable, nunito_sans.variable) }
       >
         <HeaderComponent />
+        
         {children}
       </body>
     </html>

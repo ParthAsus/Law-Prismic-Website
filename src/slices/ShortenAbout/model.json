@@ -30,21 +30,30 @@
             "single": "paragraph,strong,em"
           }
         },
-        "link": {
-          "type": "Link",
+        "links_name": {
+          "type": "Group",
           "config": {
-            "label": "Link",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "select": null,
-            "allowText": true
-          }
-        },
-        "label": {
-          "type": "Text",
-          "config": {
-            "label": "Label",
-            "placeholder": ""
+            "label": "Links Name",
+            "repeat": true,
+            "fields": {
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              },
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         },
         "contact_us_heading": {
@@ -63,6 +72,13 @@
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,em,strong"
+          }
+        },
+        "contact_us_button": {
+          "type": "Text",
+          "config": {
+            "label": "Contact Us Button",
+            "placeholder": ""
           }
         }
       },
