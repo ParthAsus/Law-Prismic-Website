@@ -177,130 +177,58 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes = HomepageDocument | SettingsDocument;
 
 /**
- * Item in *Campaign → ImageLeft → Primary → Campaign Content*
- */
-export interface CampaignSliceDefaultPrimaryCampaignContentItem {
-  /**
-   * Image field in *Campaign → ImageLeft → Primary → Campaign Content*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.default.primary.campaign_content[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Title field in *Campaign → ImageLeft → Primary → Campaign Content*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.default.primary.campaign_content[].title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
-  /**
-   * Content field in *Campaign → ImageLeft → Primary → Campaign Content*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.default.primary.campaign_content[].content
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  content: prismic.RichTextField;
-
-  /**
-   * Link to page field in *Campaign → ImageLeft → Primary → Campaign Content*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.default.primary.campaign_content[].link_to_page
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link_to_page: prismic.LinkField;
-
-  /**
-   * button field in *Campaign → ImageLeft → Primary → Campaign Content*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.default.primary.campaign_content[].button
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button: prismic.KeyTextField;
-}
-
-/**
- * Item in *Campaign → ImageRight → Primary → Campaign Content*
- */
-export interface CampaignSliceImageRightPrimaryCampaignContentItem {
-  /**
-   * Image field in *Campaign → ImageRight → Primary → Campaign Content*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.imageRight.primary.campaign_content[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Title field in *Campaign → ImageRight → Primary → Campaign Content*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.imageRight.primary.campaign_content[].title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
-  /**
-   * Content field in *Campaign → ImageRight → Primary → Campaign Content*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.imageRight.primary.campaign_content[].content
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  content: prismic.RichTextField;
-
-  /**
-   * Link to page field in *Campaign → ImageRight → Primary → Campaign Content*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.imageRight.primary.campaign_content[].link_to_page
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link_to_page: prismic.LinkField;
-
-  /**
-   * button field in *Campaign → ImageRight → Primary → Campaign Content*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.imageRight.primary.campaign_content[].button
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button: prismic.KeyTextField;
-}
-
-/**
  * Primary content in *Campaign → ImageLeft → Primary*
  */
 export interface CampaignSliceDefaultPrimary {
   /**
-   * Campaign Content field in *Campaign → ImageLeft → Primary*
+   * Image field in *Campaign → ImageLeft → Primary*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.default.primary.campaign_content[]
-   * - **Documentation**: https://prismic.io/docs/field#group
+   * - **API ID Path**: campaign.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
    */
-  campaign_content: prismic.GroupField<
-    Simplify<CampaignSliceDefaultPrimaryCampaignContentItem>
-  >;
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Campaign → ImageLeft → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: campaign.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Content field in *Campaign → ImageLeft → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: campaign.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Link to page field in *Campaign → ImageLeft → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: campaign.default.primary.link_to_page
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_to_page: prismic.LinkField;
+
+  /**
+   * Button field in *Campaign → ImageLeft → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: campaign.default.primary.button
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button: prismic.KeyTextField;
 }
 
 /**
@@ -317,24 +245,62 @@ export type CampaignSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Campaign → ImageRight → Primary*
+ * Primary content in *Campaign → Image Right → Primary*
  */
 export interface CampaignSliceImageRightPrimary {
   /**
-   * Campaign Content field in *Campaign → ImageRight → Primary*
+   * Image field in *Campaign → Image Right → Primary*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: campaign.imageRight.primary.campaign_content[]
-   * - **Documentation**: https://prismic.io/docs/field#group
+   * - **API ID Path**: campaign.imageRight.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
    */
-  campaign_content: prismic.GroupField<
-    Simplify<CampaignSliceImageRightPrimaryCampaignContentItem>
-  >;
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Campaign → Image Right → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: campaign.imageRight.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Content field in *Campaign → Image Right → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: campaign.imageRight.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Link to page field in *Campaign → Image Right → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: campaign.imageRight.primary.link_to_page
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_to_page: prismic.LinkField;
+
+  /**
+   * Button field in *Campaign → Image Right → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: campaign.imageRight.primary.button
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button: prismic.KeyTextField;
 }
 
 /**
- * ImageRight variation for Campaign Slice
+ * Image Right variation for Campaign Slice
  *
  * - **API ID**: `imageRight`
  * - **Description**: Default
@@ -602,36 +568,6 @@ export interface ShortenAboutSliceDefaultPrimary {
   links_name: prismic.GroupField<
     Simplify<ShortenAboutSliceDefaultPrimaryLinksNameItem>
   >;
-
-  /**
-   * Contact Us Heading field in *ShortenAbout → Default → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: shorten_about.default.primary.contact_us_heading
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  contact_us_heading: prismic.TitleField;
-
-  /**
-   * Contact Us Content field in *ShortenAbout → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: shorten_about.default.primary.contact_us_content
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  contact_us_content: prismic.RichTextField;
-
-  /**
-   * Contact Us Button field in *ShortenAbout → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: shorten_about.default.primary.contact_us_button
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  contact_us_button: prismic.KeyTextField;
 }
 
 /**
@@ -693,9 +629,7 @@ declare module "@prismicio/client" {
       SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
       CampaignSlice,
-      CampaignSliceDefaultPrimaryCampaignContentItem,
       CampaignSliceDefaultPrimary,
-      CampaignSliceImageRightPrimaryCampaignContentItem,
       CampaignSliceImageRightPrimary,
       CampaignSliceVariation,
       CampaignSliceDefault,

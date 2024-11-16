@@ -8,8 +8,6 @@ import {
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
-import clsx from "clsx";
-import Image from "next/image";
 
 const components: JSXMapSerializer = {
   heading1: ({ children }) => (

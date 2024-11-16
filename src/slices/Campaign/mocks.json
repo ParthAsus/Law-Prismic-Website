@@ -3,88 +3,63 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"campaign_content": {
-				"__TYPE__": "GroupContentType",
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+					"width": 5000,
+					"height": 4613
+				},
+				"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+				"width": 5000,
+				"height": 4613,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"image",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
-										"width": 4480,
-										"height": 4480
-									},
-									"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
-									"width": 4480,
-									"height": 4480,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"credits": null,
-									"alt": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "heading4",
-											"content": {
-												"text": "Stock"
-											}
-										}
-									]
-								}
-							],
-							[
-								"content",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Proident non deserunt ea adipisicing deserunt reprehenderit culpa aliquip ipsum incididunt. Deserunt do fugiat id labore minim amet minim sit culpa do reprehenderit duis eiusmod id consectetur. Et consectetur ut sint."
-											}
-										}
-									]
-								}
-							],
-							[
-								"link_to_page",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io",
-										"text": "peace"
-									}
-								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "forward",
-									"type": "Text"
-								}
-							]
-						]
+						"type": "heading3",
+						"content": {
+							"text": "Essential"
+						}
 					}
 				]
+			},
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Elit et culpa veniam sint labore sunt nisi. Elit commodo commodo esse officia est officia aliquip proident non cillum dolor nisi dolore."
+						}
+					}
+				]
+			},
+			"link_to_page": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "cold"
+				}
+			},
+			"button": {
+				"__TYPE__": "FieldContent",
+				"value": "yet",
+				"type": "Text"
 			}
 		},
 		"items": []
@@ -93,88 +68,63 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "imageRight",
 		"primary": {
-			"campaign_content": {
-				"__TYPE__": "GroupContentType",
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+					"width": 5616,
+					"height": 3744
+				},
+				"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+				"width": 5616,
+				"height": 3744,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"image",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
-										"width": 3456,
-										"height": 3456
-									},
-									"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
-									"width": 3456,
-									"height": 3456,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"credits": null,
-									"alt": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "heading4",
-											"content": {
-												"text": "Anyway"
-											}
-										}
-									]
-								}
-							],
-							[
-								"content",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "In magna sunt sit nostrud deserunt do irure in voluptate do velit."
-											}
-										}
-									]
-								}
-							],
-							[
-								"link_to_page",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://slicemachine.dev",
-										"text": "mice"
-									}
-								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "news",
-									"type": "Text"
-								}
-							]
-						]
+						"type": "heading3",
+						"content": {
+							"text": "Expect"
+						}
 					}
 				]
+			},
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem deserunt elit ea anim ut nulla est."
+						}
+					}
+				]
+			},
+			"link_to_page": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "column"
+				}
+			},
+			"button": {
+				"__TYPE__": "FieldContent",
+				"value": "steel",
+				"type": "Text"
 			}
 		},
 		"items": [

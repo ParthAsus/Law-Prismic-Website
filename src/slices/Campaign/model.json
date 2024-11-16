@@ -12,56 +12,47 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "campaign_content": {
-          "type": "Group",
+        "image": {
+          "type": "Image",
           "config": {
-            "label": "Campaign Content",
-            "repeat": true,
-            "fields": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "label": "Image",
-                  "constraint": {},
-                  "thumbnails": []
-                }
-              },
-              "title": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Title",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "single": "heading4,heading3"
-                }
-              },
-              "content": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Content",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "single": "paragraph,strong,em"
-                }
-              },
-              "link_to_page": {
-                "type": "Link",
-                "config": {
-                  "label": "Link to page",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "select": null,
-                  "allowText": true
-                }
-              },
-              "button": {
-                "type": "Text",
-                "config": {
-                  "label": "button",
-                  "placeholder": ""
-                }
-              }
-            }
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "link_to_page": {
+          "type": "Link",
+          "config": {
+            "label": "Link to page",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "button": {
+          "type": "Text",
+          "config": {
+            "label": "Button",
+            "placeholder": ""
           }
         }
       },
@@ -69,62 +60,53 @@
     },
     {
       "id": "imageRight",
-      "name": "ImageRight",
+      "name": "Image Right",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "campaign_content": {
-          "type": "Group",
+        "image": {
+          "type": "Image",
           "config": {
-            "label": "Campaign Content",
-            "repeat": true,
-            "fields": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "label": "Image",
-                  "constraint": {},
-                  "thumbnails": []
-                }
-              },
-              "title": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Title",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "single": "heading4,heading3"
-                }
-              },
-              "content": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Content",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "single": "paragraph,strong,em"
-                }
-              },
-              "link_to_page": {
-                "type": "Link",
-                "config": {
-                  "label": "Link to page",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "select": null,
-                  "allowText": true
-                }
-              },
-              "button": {
-                "type": "Text",
-                "config": {
-                  "label": "button",
-                  "placeholder": ""
-                }
-              }
-            }
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "link_to_page": {
+          "type": "Link",
+          "config": {
+            "label": "Link to page",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "button": {
+          "type": "Text",
+          "config": {
+            "label": "Button",
+            "placeholder": ""
           }
         }
       },

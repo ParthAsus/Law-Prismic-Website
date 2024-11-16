@@ -19,7 +19,7 @@ const components: JSXMapSerializer = {
     </Heading>
   ),
   paragraph: ({ children }) => (
-    <p className="text-gray-700 font-body font-bold text-lg leading-8 hover:text-[#00acc1] transition-colors duration-300 ease-in-out">
+    <p className="text-gray-700 font-body font-bold text-lg leading-8 hover:text-[#00acc1] transition-colors duration-300 ease-in-out text-justify">
       {children}
     </p>
   ),

@@ -25,28 +25,6 @@
 					}
 				]
 			},
-			"contact_us_heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading3",
-						"content": {
-							"text": "Planet"
-						}
-					}
-				]
-			},
-			"contact_us_content": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Sint anim magna sit minim non do do minim. Reprehenderit elit proident consequat. Eiusmod cupidatat officia culpa sit."
-						}
-					}
-				]
-			},
 			"links_name": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -75,11 +53,6 @@
 						]
 					}
 				]
-			},
-			"contact_us_button": {
-				"__TYPE__": "FieldContent",
-				"value": "naturally",
-				"type": "Text"
 			}
 		},
 		"items": []

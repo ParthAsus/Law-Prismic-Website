@@ -55,31 +55,6 @@
               }
             }
           }
-        },
-        "contact_us_heading": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Contact Us Heading",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading3"
-          }
-        },
-        "contact_us_content": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Contact Us Content",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,em,strong"
-          }
-        },
-        "contact_us_button": {
-          "type": "Text",
-          "config": {
-            "label": "Contact Us Button",
-            "placeholder": ""
-          }
         }
       },
       "items": {}
