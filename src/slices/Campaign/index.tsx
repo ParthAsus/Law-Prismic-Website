@@ -7,12 +7,13 @@ import {
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
+import clsx from "clsx";
 
 /**
  * Props for `Campaign`.
  */
 const componenets: JSXMapSerializer = {
-  heading2: ({ children }) => (
+  heading3: ({ children }) => (
     <Heading as="h3" size="lg" className="">
       {children}
     </Heading>
@@ -33,13 +34,15 @@ const Campaign = ({ slice }: CampaignProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div>
-        <PrismicNextImage field={slice.primary.image} />
-        <PrismicRichText field={slice.primary.title} />
-        <PrismicRichText field={slice.primary.content} />
+      <div className="grid gap-8 lg:grid-cols-2 sm:place-items-center lg:place-items-start bg-white w-full">
+        <PrismicNextImage field={slice.primary.image} className={clsx(slice.variation == "imageRight" && "md:order-2", "rounded-2xl shadow-2xl max-w-xl h-[600px] object-cover overflow-hidden")}/>
+        <div className="grid gap-4 items-center justify-center place-items-center">
+        <PrismicRichText field={slice.primary.title} components={componenets}/>
+        <PrismicRichText field={slice.primary.content} components={componenets}/>
         <PrismicNextLink field={slice.primary.link_to_page}>
-        {slice.primary.button}
+          {slice.primary.button}
         </PrismicNextLink>
+        </div>
       </div>
     </Bounded>
   );
