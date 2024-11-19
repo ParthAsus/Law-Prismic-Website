@@ -5,6 +5,7 @@ import { nunito, nunito_sans } from "./fonts/font";
 import { createClient } from "@/prismicio";
 import { Metadata } from "next";
 import HeaderComponent from "@/app/components/header";
+import Footer from "./components/footer";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -34,6 +35,8 @@ export default function RootLayout({
         <HeaderComponent />
         
         {children}
+
+        <Footer />
       </body>
     </html>
   );

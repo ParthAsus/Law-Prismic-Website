@@ -4,6 +4,186 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Item in *Footer → Social Media*
+ */
+export interface FooterDocumentDataSocialMediaItem {
+  /**
+   * Social Media Names field in *Footer → Social Media*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_media[].social_media_names
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  social_media_names: prismic.SelectField<
+    "Facebook" | "Instagram" | "Twitter" | "GitHub" | "Reddit"
+  >;
+
+  /**
+   * Social Media Link field in *Footer → Social Media*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_media[].social_media_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  social_media_link: prismic.LinkField;
+}
+
+/**
+ * Item in *Footer → Pages Repeatable Zone*
+ */
+export interface FooterDocumentDataPagesRepeatableZoneItem {
+  /**
+   * Page Name field in *Footer → Pages Repeatable Zone*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.pages_repeatable_zone[].page_name
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  page_name: prismic.RichTextField;
+
+  /**
+   * Page Link field in *Footer → Pages Repeatable Zone*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.pages_repeatable_zone[].page_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  page_link: prismic.LinkField;
+}
+
+/**
+ * Item in *Footer → Contact Repeatable Zone*
+ */
+export interface FooterDocumentDataContactRepeatableZoneItem {
+  /**
+   * Content field in *Footer → Contact Repeatable Zone*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.contact_repeatable_zone[].content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * About field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.about
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  about: prismic.RichTextField;
+
+  /**
+   * Social Media field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_media[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  social_media: prismic.GroupField<Simplify<FooterDocumentDataSocialMediaItem>>;
+
+  /**
+   * Menu field in *Footer*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.menu
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  menu: prismic.TitleField;
+
+  /**
+   * Pages Repeatable Zone field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.pages_repeatable_zone[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  pages_repeatable_zone: prismic.GroupField<
+    Simplify<FooterDocumentDataPagesRepeatableZoneItem>
+  >;
+
+  /**
+   * Contact field in *Footer*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.contact
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  contact: prismic.TitleField;
+
+  /**
+   * Contact Repeatable Zone field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.contact_repeatable_zone[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  contact_repeatable_zone: prismic.GroupField<
+    Simplify<FooterDocumentDataContactRepeatableZoneItem>
+  >;
+
+  /**
+   * Copyright Content field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright_content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  copyright_content: prismic.RichTextField;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
 type HomepageDocumentDataSlicesSlice =
   | FeaturesSlice
   | ShortenAboutSlice
@@ -83,6 +263,67 @@ export type HomepageDocument<Lang extends string = string> =
     "homepage",
     Lang
   >;
+
+type PageDocumentDataSlicesSlice = ContactSlice | HeroSlice;
+
+/**
+ * Content for Page documents
+ */
+interface PageDocumentData {
+  /**
+   * Slice Zone field in *Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Page document from Prismic
+ *
+ * - **API ID**: `page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 /**
  * Item in *Settings → Navigation*
@@ -174,7 +415,11 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomepageDocument | SettingsDocument;
+export type AllDocumentTypes =
+  | FooterDocument
+  | HomepageDocument
+  | PageDocument
+  | SettingsDocument;
 
 /**
  * Primary content in *Campaign → ImageLeft → Primary*
@@ -327,6 +572,91 @@ type CampaignSliceVariation = CampaignSliceDefault | CampaignSliceImageRight;
 export type CampaignSlice = prismic.SharedSlice<
   "campaign",
   CampaignSliceVariation
+>;
+
+/**
+ * Primary content in *Contact → Default → Primary*
+ */
+export interface ContactSliceDefaultPrimary {
+  /**
+   * Title field in *Contact → Default → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Description field in *Contact → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Image field in *Contact → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Add Email field in *Contact → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.add_email
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  add_email: prismic.RichTextField;
+
+  /**
+   * Add Address field in *Contact → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.add_address
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  add_address: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Contact Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Contact*
+ */
+type ContactSliceVariation = ContactSliceDefault;
+
+/**
+ * Contact Shared Slice
+ *
+ * - **API ID**: `contact`
+ * - **Description**: Contact
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactSlice = prismic.SharedSlice<
+  "contact",
+  ContactSliceVariation
 >;
 
 /**
@@ -621,9 +951,17 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataSocialMediaItem,
+      FooterDocumentDataPagesRepeatableZoneItem,
+      FooterDocumentDataContactRepeatableZoneItem,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      PageDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
@@ -634,6 +972,10 @@ declare module "@prismicio/client" {
       CampaignSliceVariation,
       CampaignSliceDefault,
       CampaignSliceImageRight,
+      ContactSlice,
+      ContactSliceDefaultPrimary,
+      ContactSliceVariation,
+      ContactSliceDefault,
       FeaturesSlice,
       FeaturesSliceDefaultPrimaryFeaturerepeatablezoneItem,
       FeaturesSliceDefaultPrimary,

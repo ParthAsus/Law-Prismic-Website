@@ -1,0 +1,76 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Itself"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud dolore esse aute proident commodo ea laborum ea dolore consequat. Incididunt occaecat Lorem occaecat aliquip velit amet cillum et sit qui aute consequat eu sint."
+						}
+					}
+				]
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+					"width": 6597,
+					"height": 4398
+				},
+				"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+				"width": 6597,
+				"height": 4398,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"add_email": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Amet ex eiusmod aliquip veniam proident tempor occaecat. Quis reprehenderit proident ad sint. Sint nostrud sunt ea ea aliqua ut non nostrud id duis excepteur."
+						}
+					}
+				]
+			},
+			"add_address": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nisi est non magna laboris officia. Adipisicing eiusmod est labore ipsum ex minim cillum."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

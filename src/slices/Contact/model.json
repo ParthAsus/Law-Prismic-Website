@@ -1,0 +1,63 @@
+{
+  "id": "contact",
+  "type": "SharedSlice",
+  "name": "Contact",
+  "description": "Contact",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "add_email": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Add Email",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "add_address": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Add Address",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
