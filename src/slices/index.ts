@@ -7,5 +7,6 @@ export const components = {
   contact: dynamic(() => import("./Contact")),
   features: dynamic(() => import("./Features")),
   hero: dynamic(() => import("./Hero")),
+  open_roles: dynamic(() => import("./OpenRoles")),
   shorten_about: dynamic(() => import("./ShortenAbout")),
 };

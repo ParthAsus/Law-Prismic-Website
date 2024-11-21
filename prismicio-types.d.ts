@@ -264,7 +264,7 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = ContactSlice | HeroSlice;
+type PageDocumentDataSlicesSlice = OpenRolesSlice | ContactSlice | HeroSlice;
 
 /**
  * Content for Page documents
@@ -839,6 +839,76 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Item in *OpenRoles → Default → Primary → Roles*
+ */
+export interface OpenRolesSliceDefaultPrimaryRolesItem {
+  /**
+   * Title field in *OpenRoles → Default → Primary → Roles*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: open_roles.default.primary.roles[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Job Description field in *OpenRoles → Default → Primary → Roles*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: open_roles.default.primary.roles[].job_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  job_description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *OpenRoles → Default → Primary*
+ */
+export interface OpenRolesSliceDefaultPrimary {
+  /**
+   * Roles field in *OpenRoles → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: open_roles.default.primary.roles[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  roles: prismic.GroupField<Simplify<OpenRolesSliceDefaultPrimaryRolesItem>>;
+}
+
+/**
+ * Default variation for OpenRoles Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OpenRolesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<OpenRolesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *OpenRoles*
+ */
+type OpenRolesSliceVariation = OpenRolesSliceDefault;
+
+/**
+ * OpenRoles Shared Slice
+ *
+ * - **API ID**: `open_roles`
+ * - **Description**: OpenRoles
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OpenRolesSlice = prismic.SharedSlice<
+  "open_roles",
+  OpenRolesSliceVariation
+>;
+
+/**
  * Item in *ShortenAbout → Default → Primary → Links Name*
  */
 export interface ShortenAboutSliceDefaultPrimaryLinksNameItem {
@@ -985,6 +1055,11 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      OpenRolesSlice,
+      OpenRolesSliceDefaultPrimaryRolesItem,
+      OpenRolesSliceDefaultPrimary,
+      OpenRolesSliceVariation,
+      OpenRolesSliceDefault,
       ShortenAboutSlice,
       ShortenAboutSliceDefaultPrimaryLinksNameItem,
       ShortenAboutSliceDefaultPrimary,
