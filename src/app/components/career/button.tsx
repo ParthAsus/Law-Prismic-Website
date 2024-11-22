@@ -8,6 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import CareerForm from "./careerForm";
 
 
 interface buttonProps{
@@ -37,7 +38,7 @@ const CareerButton = ({label, jobTitle}: buttonProps) => {
             <DialogHeader>
               <DialogTitle>{jobTitle}</DialogTitle>
             </DialogHeader>
-            <form className="space-y-4">
+            {/* <form className="space-y-4">
               <div>
                 <label className="block text-sm font-medium">Name</label>
                 <input
@@ -67,7 +68,9 @@ const CareerButton = ({label, jobTitle}: buttonProps) => {
               >
                 Submit Application
               </button>
-            </form>
+            </form> */}
+
+            <CareerForm jobTitle={jobTitle}/>
           </DialogContent>
         </Dialog>
       )}        
