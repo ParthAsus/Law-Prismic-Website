@@ -18,4 +18,5 @@ export async function generateMetadata(): Promise<Metadata> {
     title: page.data.meta_title,
     description: page.data.meta_description,
   };
-}
+} 
+

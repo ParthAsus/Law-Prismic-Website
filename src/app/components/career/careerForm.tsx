@@ -26,12 +26,14 @@ import {
 } from "@/components/ui/form";
 import { careerFormSchema } from "@/lib/schema";
 import { careerFormDataSend } from "@/lib/email";
+import { showToast } from "@/lib/toasts";
 
 interface CareerFormProps {
   jobTitle: string;
+  handleModalClose: () => void;
 }
 
-export default function CareerForm({ jobTitle }: CareerFormProps) {
+export default function CareerForm({ jobTitle, handleModalClose }: CareerFormProps) {
   const [fileName, setFileName] = useState("");
   const [error, setError] = useState<string | null>(null);
 
@@ -61,9 +63,9 @@ export default function CareerForm({ jobTitle }: CareerFormProps) {
   async function onSubmit(values: z.infer<typeof careerFormSchema>) {
     try {
       await careerFormDataSend(values, jobTitle);
-      console.log("Form submitted successfully:", values);
+      showToast();
+      handleModalClose();
     } catch (err) {
-      console.error("Form submission failed:", err);
       setError("Failed to submit the application. Please try again.");
     }
   }

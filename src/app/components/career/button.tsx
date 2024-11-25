@@ -36,41 +36,9 @@ const CareerButton = ({label, jobTitle}: buttonProps) => {
         <Dialog open={isModalOpen} onOpenChange={handleModalClose}>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>{jobTitle}</DialogTitle>
+              <DialogTitle></DialogTitle>
             </DialogHeader>
-            {/* <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium">Name</label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2 border rounded"
-                  placeholder="Enter your name"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Email</label>
-                <input
-                  type="email"
-                  className="w-full px-3 py-2 border rounded"
-                  placeholder="Enter your email"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Message</label>
-                <textarea
-                  className="w-full px-3 py-2 border rounded"
-                  placeholder="Why are you a good fit for this role?"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-              >
-                Submit Application
-              </button>
-            </form> */}
-
-            <CareerForm jobTitle={jobTitle}/>
+            <CareerForm jobTitle={jobTitle} handleModalClose={handleModalClose}/>
           </DialogContent>
         </Dialog>
       )}        
